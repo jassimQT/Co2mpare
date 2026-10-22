@@ -81,7 +81,7 @@ Les **labels** sont des étiquettes pour classer les tâches. Nous utilisons les
 - [x] Créer le dépôt, la base du thème enfant, le README et le fichier .gitignore.
 - [x] Créer les premières issues avec des labels.
 - [x] Fusionner une première PR sur le compte de Jassim : [PR nº 7](https://github.com/jassimQT/Co2mpare/pull/7).
-- [ ] Vérifier que Michal a accepté son invitation et peut modifier le dépôt.
+- [x] Vérifier que Michal a accepté son invitation et peut modifier le dépôt.
 - [ ] Vérifier l'accès des enseignants DFEF / DIA.
 - [ ] Créer ou lier le tableau Projects avec les quatre colonnes et y ajouter les issues.
 - [ ] Michal réalise une modification depuis son compte, ouvre une PR et la fusionne après vérification.
