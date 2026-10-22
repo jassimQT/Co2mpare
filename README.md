@@ -1,74 +1,90 @@
 # cO²mpare
 
-Plateforme de comparaison de trajets selon le coût, la durée et les émissions de CO₂. Le projet vise à aider les utilisateurs à comparer les moyens de transport selon leurs priorités.
+cO²mpare est un projet de site qui permettra de comparer des trajets selon leur prix, leur durée et leurs émissions de CO₂.
 
-## Équipe et répartition initiale proposée
+## Notre équipe
 
-| Membre | Compte GitHub | Premières tâches |
+| Membre | Compte GitHub | Tâches prévues |
 | --- | --- | --- |
-| Jassim | @jassimQT | Initialiser le thème enfant, documenter l'installation et les conventions |
-| Michal | À renseigner | Préparer la structure de la page de comparaison et les premiers styles |
+| Jassim | [jassimQT](https://github.com/jassimQT) | Préparer le dépôt, les fichiers du thème et les explications |
+| Michal | [michal0612](https://github.com/michal0612) | Vérifier les explications d'installation, puis préparer la page de comparaison et son apparence |
 
-Chaque membre réalise ses modifications sur sa branche, ouvre sa propre pull request et participe à la vérification du travail de l'autre. La répartition pourra évoluer via les issues.
+Les tâches sont suivies dans l'onglet **Issues** du dépôt. La répartition peut évoluer.
 
-## Outils
+## Les outils
 
-- WordPress et thème parent Twenty Twenty-Four.
-- PHP, HTML, CSS et JavaScript si nécessaire.
-- Git et GitHub pour le versionnage, les issues, les pull requests et GitHub Projects.
-- Un environnement WordPress local et un éditeur de code au choix de chaque membre.
+- **WordPress** : l'outil utilisé pour créer le site.
+- **Twenty Twenty-Four** : le thème parent qui sert de base.
+- **cO²mpare** : notre thème enfant, dans lequel nous ajouterons nos personnalisations.
+- **PHP, HTML et CSS**, puis JavaScript si nécessaire : les langages utilisés pour développer le site.
+- **Git** : conserve l'historique des modifications.
+- **GitHub** : permet de partager les fichiers, les tâches et les modifications de l'équipe.
 
-Aucun service de calcul d'itinéraire ou d'émissions n'est encore choisi. Le comparateur n'est pas encore implémenté.
+## Les fichiers
 
-## Structure
+- `co2mpare/style.css` : indique le nom du thème, son parent et accueillera nos styles.
+- `co2mpare/functions.php` : permet notamment de charger les styles du thème enfant.
+- `co2mpare/assets/` : dossiers réservés aux futurs fichiers CSS et JavaScript.
+- `co2mpare/templates/` et `co2mpare/parts/` : dossiers réservés aux futures mises en page.
+- `.gitignore` : indique à Git les fichiers à ne pas partager, par exemple les mots de passe et sauvegardes locales.
+- `README.md` : cette page d'explications.
+- `.github/pull_request_template.md` : quelques questions pour expliquer une modification avant de l'intégrer.
 
-```text
-co2mpare/                 Thème enfant à installer dans WordPress
-  style.css              Déclaration du thème et styles du projet
-  functions.php          Chargement de la feuille de styles
-  assets/css/            Feuilles de styles supplémentaires
-  assets/js/             Scripts du projet
-  templates/             Futurs modèles HTML de blocs
-  parts/                 Futures parties de modèles
-docs/                    Plan de travail et suivi GitHub
-.github/                 Modèle de pull request
-```
+Les fichiers `.gitkeep` servent uniquement à conserver les dossiers encore vides sur GitHub.
 
-Les modèles et parties non personnalisés sont hérités du parent. Les dossiers réservés contiennent un fichier `.gitkeep` pour être conservés dans Git.
+## Installer le thème dans WordPress
 
-## Installation locale
+1. Préparer une installation de WordPress pour les essais.
+2. Dans **Apparence → Thèmes → Ajouter un thème**, installer **Twenty Twenty-Four**.
+3. Copier le dossier `co2mpare` du dépôt dans le dossier `wp-content/themes/` de cette installation.
+4. Dans **Apparence → Thèmes**, activer **cO²mpare**.
+5. Ouvrir le site pour vérifier qu'il s'affiche sans erreur.
 
-1. Installer WordPress dans un environnement local.
-2. Installer Twenty Twenty-Four depuis Apparence → Thèmes → Ajouter un thème. Son dossier doit s'appeler `twentytwentyfour`.
-3. Copier le dossier `co2mpare` de ce dépôt dans `wp-content/themes/`.
-4. Dans Apparence → Thèmes, activer **cO²mpare**.
-5. Ouvrir le site et vérifier l'absence d'erreur et le chargement de `co2mpare/style.css`.
+Le thème parent doit rester installé. Nous modifierons les fichiers de `co2mpare`, pas ceux de Twenty Twenty-Four. Au début, le site reprend l'apparence du parent. Le comparateur sera développé plus tard : il n'est pas demandé de le terminer pour ce devoir de préparation du dépôt.
 
-Le dépôt contient le thème enfant, pas WordPress entier. Ne jamais modifier directement le thème parent. Les modifications de modèles faites dans l'éditeur WordPress sont enregistrées en base : exporter les modèles et reporter les fichiers dans le thème pour les partager avec l'équipe.
+## Travailler à deux sur GitHub
 
-## Branches et commits
+- Une **issue** est une fiche qui décrit une tâche.
+- Une **branche** est un espace pour préparer des modifications sans changer immédiatement la version commune.
+- La branche **main** contient la version commune du projet.
+- Un **commit** est un enregistrement des modifications, accompagné d'un court message.
+- Une **pull request**, ou **PR**, est une demande pour intégrer une branche dans `main`.
+- **Fusionner** une PR signifie intégrer ses modifications dans `main`.
 
-- `main` : version commune vérifiée ; pas de travail quotidien directement dessus.
-- Une branche courte par tâche : `feat/comparateur`, `style/page-comparaison`, `docs/installation` ou `fix/chargement-css`.
-- Commits courts et descriptifs : `feat: ajouter la structure du comparateur`, `style: ajuster les boutons`, `docs: préciser l'installation`, `fix: corriger le chargement CSS`.
-- Une pull request par tâche ; décrire la modification, les vérifications et l'issue liée (`Closes #NUMERO`).
-- Demander la vérification de l'autre membre, corriger les remarques puis fusionner après validation.
-- Après fusion, actualiser `main` avant de commencer une autre tâche.
+Pour chaque tâche :
 
-## Organisation du projet GitHub
+1. Choisir une issue.
+2. Créer une branche depuis la version à jour de `main`. Utiliser un nom simple, comme `michal/installation` ou `jassim/documentation`.
+3. Modifier les fichiers concernés.
+4. Enregistrer les modifications avec un message clair, par exemple « Préciser les étapes d'installation ».
+5. Ouvrir une PR vers `main` et indiquer le numéro de l'issue concernée.
+6. Faire relire la modification par l'autre membre. Corriger si nécessaire, puis fusionner la PR.
+7. Repartir de `main` à jour pour la tâche suivante.
 
-Tableau prévu : **cO²mpare — Suivi du projet**.
+Chaque membre utilise son propre compte. Pour valider le devoir, chacun doit avoir fusionné au moins une PR. Une petite amélioration utile du README peut être une première contribution ; il n'est pas nécessaire de développer toute une page pour apprendre cette étape.
 
-Statuts : **À faire → En cours → À vérifier → Terminé**.
+## Le tableau de suivi
 
-Une issue représente une tâche et possède un responsable. Utiliser les labels déjà présents dans le dépôt, après vérification de leurs noms. Voir `docs/plan-github.md` pour les tâches proposées et le parcours de PR de chaque membre.
+Le tableau **GitHub Projects** doit organiser les issues en quatre colonnes :
 
-## Vérification avant remise
+| Colonne | Signification |
+| --- | --- |
+| À faire | La tâche n'a pas encore commencé |
+| En cours | Un membre travaille dessus |
+| À vérifier | Les modifications attendent une vérification |
+| Terminé | La tâche est finie et ses modifications sont intégrées |
 
-- [ ] Vérifier l'accès des deux membres et des enseignants DFEF / DIA.
-- [ ] Vérifier le README, le .gitignore et l'activation du thème enfant.
-- [ ] Créer les issues avec les labels existants et les ajouter au tableau.
-- [ ] Chaque membre a fusionné au moins une pull request issue de sa contribution.
-- [ ] Remettre une seule fois le lien https://github.com/jassimQT/Co2mpare.
+Les **labels** sont des étiquettes pour classer les tâches. Nous utilisons les étiquettes existantes : `documentation` pour les explications, `enhancement` pour les améliorations et `bug` pour les problèmes.
 
-État : initialisation proposée par pull request ; activation WordPress, tableau Project, accès des enseignants et fusions individuelles restent à vérifier.
+## Avant de remettre le devoir
+
+- [x] Créer le dépôt, la base du thème enfant, le README et le fichier .gitignore.
+- [x] Créer les premières issues avec des labels.
+- [x] Fusionner une première PR sur le compte de Jassim : [PR nº 7](https://github.com/jassimQT/Co2mpare/pull/7).
+- [ ] Vérifier que Michal a accepté son invitation et peut modifier le dépôt.
+- [ ] Vérifier l'accès des enseignants DFEF / DIA.
+- [ ] Créer ou lier le tableau Projects avec les quatre colonnes et y ajouter les issues.
+- [ ] Michal réalise une modification depuis son compte, ouvre une PR et la fusionne après vérification.
+- [ ] Remettre une seule fois par équipe le lien https://github.com/jassimQT/Co2mpare.
+
+L'activation du thème dans une installation WordPress reste à tester.
