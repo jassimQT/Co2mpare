@@ -1,3 +1,5 @@
+# Bonjour c'est moi Michal
+
 # cO²mpare
 
 cO²mpare est un projet de site qui permettra de comparer des trajets selon leur prix, leur durée et leurs émissions de CO₂.
