@@ -65,7 +65,7 @@ Chaque membre utilise son propre compte. Pour valider le devoir, chacun doit avo
 
 ## Le tableau de suivi
 
-Le tableau **GitHub Projects** doit organiser les issues en quatre colonnes :
+Le [tableau de suivi GitHub Projects](https://github.com/users/jassimQT/projects/1) organise les issues en quatre colonnes :
 
 | Colonne | Signification |
 | --- | --- |
@@ -83,7 +83,7 @@ Les **labels** sont des étiquettes pour classer les tâches. Nous utilisons les
 - [x] Fusionner une première PR sur le compte de Jassim : [PR nº 7](https://github.com/jassimQT/Co2mpare/pull/7).
 - [x] Vérifier que Michal a accepté son invitation et peut modifier le dépôt.
 - [ ] Vérifier l'accès des enseignants DFEF / DIA.
-- [ ] Créer ou lier le tableau Projects avec les quatre colonnes et y ajouter les issues.
+- [x] Créer et lier le tableau Projects avec les quatre colonnes et y ajouter les six issues.
 - [ ] Michal réalise une modification depuis son compte, ouvre une PR et la fusionne après vérification.
 - [ ] Remettre une seule fois par équipe le lien https://github.com/jassimQT/Co2mpare.
 
