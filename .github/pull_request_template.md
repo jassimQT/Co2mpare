@@ -1,13 +1,15 @@
-## Modification
+## Qu'ai-je changé ?
 
-Décrire la tâche réalisée et l'issue liée : Closes #…
+Expliquer la modification en une ou deux phrases.
 
-## Vérifications
+## Quelle tâche est concernée ?
 
-- [ ] Vérification locale effectuée (préciser les étapes et le résultat).
-- [ ] Aucun identifiant, mot de passe ou fichier local ajouté.
-- [ ] Vérification demandée à l'autre membre.
+Indiquer le numéro de l'issue, par exemple #3.
 
-## Aperçu
+## Comment ai-je vérifié ?
 
-Ajouter une capture si l'apparence change.
+Décrire ce qui a été relu ou testé. Ajouter une capture si l'apparence du site change.
+
+## Relecture
+
+- [ ] L'autre membre a vérifié la modification.
