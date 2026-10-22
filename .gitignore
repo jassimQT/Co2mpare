@@ -1,0 +1,29 @@
+# Système et éditeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Dépendances et fichiers locaux
+node_modules/
+vendor/
+.env
+.env.*
+!.env.example
+*.log
+
+# Installation WordPress locale : seul le thème enfant est versionné
+/wordpress/
+/wp-admin/
+/wp-includes/
+/wp-content/
+wp-config.php
+wp-config-local.php
+
+# Bases de données, sauvegardes et archives
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
